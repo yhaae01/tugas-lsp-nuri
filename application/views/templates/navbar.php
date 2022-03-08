@@ -11,6 +11,9 @@
                     <a class="nav-link" href="<?= base_url('buku'); ?>">Buku</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('kategori'); ?>">Kategori</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('sorting'); ?>">Sorting</a>
                 </li>
             </ul>
