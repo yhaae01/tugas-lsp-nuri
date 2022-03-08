@@ -2,7 +2,6 @@
     <h3 class="my-4"><?= $title; ?></h3>
     
     <div class="row mb-3">
-        <div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
         <div class="col-lg-6">
             <a href="<?= base_url('buku/tambahBuku') ?>" class="btn btn-primary btn-sm">Tambah Buku</a>
         </div>
@@ -66,7 +65,7 @@
                                         <form action="<?= base_url('buku/hapus/') . $b['id_buku']; ?>" method="post">
                                             <p>Yakin ingin hapus Buku: <strong><?= ucwords($b['judul']); ?> </strong></p>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
+                                            <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Tutup</button>
                                             <button type="submit" class="btn btn-sm btn-outline-danger">Ya, hapus</button>
                                         </div>
                                     </form>
