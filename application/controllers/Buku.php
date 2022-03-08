@@ -69,9 +69,7 @@ class Buku extends CI_Controller
             if (!$this->upload->do_upload('image')) {
                 $this->session->set_flashdata(
                     'message',
-                    '<div class="alert alert-danger" role="alert">
-                    Oops! Terjadi suatu kesalahan.
-                    </div>'
+                    'Oops! Terjadi suatu kesalahan'
                 );
             } else {
                 $this->buku->tambah();

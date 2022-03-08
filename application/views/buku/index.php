@@ -2,13 +2,14 @@
     <h3 class="my-4"><?= $title; ?></h3>
     
     <div class="row mb-3">
+        <div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
         <div class="col-lg-6">
             <a href="<?= base_url('buku/tambahBuku') ?>" class="btn btn-primary btn-sm">Tambah Buku</a>
         </div>
         <div class="col-lg-6">
             <form action="" method="post">
                 <div class="input-group">
-                    <input type="text" class="form-control btn-sm" name="cari" placeholder="Cari buku . . .">
+                    <input type="text" class="form-control btn-sm" name="cari" placeholder="Cari sesuatu . . .">
                     <div class="input-group-append">
                         <button class="btn btn-primary btn-sm" type="submit"><span class="fas fas-search"></span> Cari</button>
                     </div>
@@ -21,10 +22,9 @@
         <div class="col-lg-12">
             <?php if (empty($buku)) : ?>
                 <div class="alert alert-danger" role="alert">
-                    Data buku tidak ditemukan!
+                    Data tidak ditemukan!
                 </div>
             <?php endif; ?>
-            <?= $this->session->flashdata('message'); ?>
             <table class="table">
                 <thead>
                     <tr>

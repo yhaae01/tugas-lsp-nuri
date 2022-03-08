@@ -30,9 +30,7 @@ class Buku_model extends CI_Model
         $this->db->insert('buku', $data);
         $this->session->set_flashdata(
             'message',
-            '<div class="alert alert-success" role="alert">
-            Data Buku berhasil ditambahkan.
-            </div>'
+            'ditambah'
         );
         redirect('buku');
     }
@@ -42,9 +40,7 @@ class Buku_model extends CI_Model
         $this->db->delete('buku', ['id_buku' => $id_buku]);
         $this->session->set_flashdata(
             'message',
-            '<div class="alert alert-success" role="alert">
-            Data Buku berhasil dihapus.
-            </div>'
+            'dihapus'
         );
         redirect('buku');
     }
@@ -64,9 +60,7 @@ class Buku_model extends CI_Model
 
         $this->session->set_flashdata(
             'message',
-            '<div class="alert alert-success" role="alert">
-            Data Buku berhasil diubah!
-            </div>'
+            'diubah'
         );
         redirect('buku');
     }
