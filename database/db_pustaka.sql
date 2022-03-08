@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 05, 2022 at 11:29 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.27
+-- Host: localhost:3306
+-- Generation Time: Mar 08, 2022 at 10:25 AM
+-- Server version: 5.7.33
+-- PHP Version: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,8 +42,7 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id_buku`, `judul`, `isbn`, `kategori`, `pengarang`, `penerbit`, `image`) VALUES
-(1, 'Harry Potter', 1231233221, 'Biografi', 'J.K. Rowling', 'Gramedia', 'BK_1643510166.jpg'),
-(5, 'Laskar Pelangi', 2147483647, 'Biografi', 'Andrea Hirata', 'Bintang Pelajar', 'BK_1643782763.jpg');
+(1, 'Harry Potter', 1231233221, 'Biografi', 'J.K. Rowling', 'Gramedia', 'BK_1643510166.jpg');
 
 -- --------------------------------------------------------
 
@@ -63,7 +62,10 @@ CREATE TABLE `kategori` (
 INSERT INTO `kategori` (`id_kategori`, `kategori`) VALUES
 (1, 'Biografi'),
 (2, 'Programming'),
-(3, 'Bisnis');
+(3, 'Bisnis'),
+(4, 'Dongeng'),
+(6, 'Sastra'),
+(7, 'Roman');
 
 --
 -- Indexes for dumped tables
@@ -89,13 +91,13 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
