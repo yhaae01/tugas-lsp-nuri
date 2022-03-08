@@ -66,7 +66,7 @@
                                         <form action="<?= base_url('buku/hapus/') . $b['id_buku']; ?>" method="post">
                                             <p>Yakin ingin hapus Buku: <strong><?= ucwords($b['judul']); ?> </strong></p>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
                                             <button type="submit" class="btn btn-sm btn-outline-danger">Ya, hapus</button>
                                         </div>
                                     </form>
